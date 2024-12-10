@@ -93,7 +93,7 @@
 - Instalado o pacote `limpam-pwquality` para gerenciar a politica de senha.
 - Editado o arquivo `/etc/pam.d/common-password` adicionando mais configurações para politica como tamanho mínimo, letra maiscula, maximo de repetição, etc.
 - Alterado os usuários para corresponder a politica de expiração de senha, usando `sudo chage -m <days> <user>` e `sudo chage -M <days> <user>` onde `m`refere-se a tempo minimo para mudar e `M` tempo maxímo para expirar
-- Atualizado as senhas dos usuários exitntes (includo root) validando o comportamento da politica configurada.
+- Atualizado as senhas dos usuários exitentes (includo root) validando o comportamento da politica configurada.
 
 
 - Configuração do script de monitoramento.
@@ -115,6 +115,17 @@
 	- Inicializa um novo configuração através do root: `sudo crontab -u root -e`
 	- Configura no arqivo o comando: `*/10 * * * * sh /home/<username>/monitoring.sh`
 
+### Evaluating comands
+
+- `ls /usr/bin/*session`: para avaliar se as sessões ativas, se houver uma interface gráfica, vai	ser possível ver as sessões ativas no terminal
+- `sudo service <service> status`: para verificar o status de um serviço
+- `uname -v`: para verificar a versão do kernel
+- `getent group <name>`: para verificar se um grupo existe
+- `/etc/hostname` e `/etc/hosts`: locais contendo o arquivo com informações referente ao hostname
+- `which <package>` ou `dpkg -s <package>`: para verificar se um pacote está instalado
+- `sudo adduser <user> <group>`: para adicionar um usuário a um grupo
+- `sudo crontab -u root -e`: para editar o crontab do root
+- `sudo /etc/init.d/cron stop`: para parar o serviço cron
 
 ### Notas de execução
 
@@ -152,3 +163,7 @@
 - `ssh_config`: arquivo de configuração usado para definir as configurações padrão do cliente SSH, permitindo especificar opções de conexão, autenticação, chaves, entre outros.
 - `sshd_config`: arquivo de configuração usado para definir as configurações do servidor SSH, permitindo configurar opções de segurança, portas, autenticação, chaves, entre outros.
 - `sudo_config`: arquivo de configuração usado para definir políticas de acesso ao comando `sudo`, permitindo especificar regras e restrições para usuários e grupos.
+- `dpkg`: ferramenta de linha de comando usada para instalar, remover e gerenciar pacotes de software no sistema Debian e derivados, permitindo instalar e atualizar programas.
+- `which`: comando usado para exibir o caminho completo de um comando ou programa executável, permitindo verificar a localização de um binário no sistema.
+- `shasum`:	ferramenta de linha de comando usada para calcular e verificar o hash SHA de arquivos, permitindo verificar a integridade e autenticidade de arquivos.
+- `LiteSpeed`: servidor web de alto desempenho e baixo consumo de recursos, oferecendo recursos avançados de cache, segurança e escalabilidade para hospedagem de sites.
