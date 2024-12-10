@@ -127,6 +127,47 @@
 - `sudo crontab -u root -e`: para editar o crontab do root
 - `sudo /etc/init.d/cron stop`: para parar o serviço cron
 
+### Evaluation concepts
+
+- **Uma máquina virtual** (VM) é um software que emula um computador físico, permitindo que você execute sistemas operacionais e aplicativos como se estivesse em um hardware real, seu funcionamento é composto por:
+	- **Hypervisor**: Software que cria e gerencia VMs. Pode ser do tipo 1 (bare-metal) ou tipo 2 (hospedado).
+	- **Isolamento**: Cada VM é isolada, garantindo que problemas em uma não afetem as outras.
+	- **Recursos Compartilhados**: VMs compartilham recursos físicos (CPU, memória, disco) do host.
+- **Diferença entre Debian e Rocky Linux**:
+	- **Debian**: Distribuição Linux conhecida por sua estabilidade, segurança e suporte a várias arquiteturas. É uma das distribuições mais antigas e populares.
+	- **Rocky Linux**: Distribuição Linux criada como um substituto para o CentOS, após a mudança da Red Hat para o CentOS Stream. É baseada no código-fonte do RHEL e foca em estabilidade e compatibilidade.
+- **Propósito das Máquinas Virtuais**:
+	- **Isolamento**: Executar múltiplos sistemas operacionais de forma isolada no mesmo hardware.
+	- **Teste e Desenvolvimento**: Criar ambientes seguros para testar software sem afetar o sistema principal.
+	- **Consolidação de Servidores**: Reduzir o número de servidores físicos, economizando recursos.
+	- **Portabilidade**: Facilitar a migração de sistemas entre diferentes hardwares.
+	- **Recuperação de Desastres**: Criar backups completos de sistemas que podem ser rapidamente restaurados.
+- **Diferença entre aptitude e apt**
+	- **aptitude**: Interface de linha de comando e TUI para gerenciar pacotes no Debian. Oferece recursos avançados de pesquisa, resolução de dependências e instalação de pacotes.
+	- **apt**: Ferramenta de linha de comando mais simples e direta para gerenciar pacotes no Debian. Combina funcionalidades de várias ferramentas de gerenciamento de pacotes.
+- **APPArmor**:	Módulo de segurança do kernel Linux que impõe restrições sobre quais recursos um programa pode acessar. Ele define políticas de segurança para aplicativos, restringindo suas ações e protegendo o sistema contra ameaças.
+- **Vantagens de uma política de senha forte**: 
+	- **Segurança**: Reduz o risco de ataques de força bruta,	senhas fracas e comprometimento de contas.
+	- **Conformidade**: Atende a requisitos de segurança e políticas de senha.
+	- **Proteção de Dados**: Aumenta a proteção de informações confidenciais e dados sensíveis.
+	- **Prevenção de Acesso Não Autorizado**: Dificulta o acesso não autorizado a sistemas e serviços.
+- **LVM**: Logical Volume Manager permite gerenciar volumes lógicos em vez de partições físicas. Ele facilita a redimensionamento, criação e exclusão de volumes sem interromper o sistema.
+- **Sudo**: Permite que usuários autorizados executem comandos com privilégios de superusuário. Ajuda a delegar permissões de forma segura e controlada.
+- **Firewall UFW**: Ferramenta de firewall para Linux que simplifica a configuração de regras de firewall. Permite controlar o tráfego de rede e proteger o sistema contra acessos não autorizados. Valor de usá-lo:
+	- **Facilidade de uso**: Interface simples para gerenciar regras.
+	- **Segurança**: Protege o sistema contra acessos não autorizados.
+	- **Controle de tráfego**: Permite definir quais conexões são permitidas ou bloqueadas.
+- **SSH**: Secure Shell é um protocolo de rede seguro usado para acessar e gerenciar sistemas remotos. Permite a transferência de arquivos, execução de comandos e interação com o sistema de forma segura. Valor de usá-lo:
+	- **Segurança**: Conexões criptografadas.
+	- **Acesso Remoto**: Gerenciamento de sistemas à distância.
+	- **Transferência de Arquivos**: Envio seguro de dados.
+	- **Execução de Comandos**: Controle remoto de servidores.
+- **Cron**:	Utilitário de agendamento de tarefas no Linux. Permite executar comandos, scripts e programas em intervalos regulares. Valor de usá-lo:
+	- **Automatização**: Execução de tarefas repetitivas.
+	- **Agendamento**: Definição de horários para execução de comandos.
+	- **Monitoramento**: Verificação periódica de sistemas e serviços.
+	- **Backup**: Criação de backups automáticos.
+
 ### Notas de execução
 
 - `lsblk`: lista as informações sobre todos os dispositivos de bloco disponíveis no sistema.
